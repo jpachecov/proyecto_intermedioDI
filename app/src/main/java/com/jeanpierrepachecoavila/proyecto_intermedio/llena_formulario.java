@@ -3,12 +3,21 @@ package com.jeanpierrepachecoavila.proyecto_intermedio;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Spinner;
 
 
 public class llena_formulario extends Activity {
+
+
+    private String respuesta1;
+    private String respuesta2;
+    private String respuesta3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +48,48 @@ public class llena_formulario extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void radioButtonPressed(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.arrebatado:
+                if (checked)
+                    respuesta1 = "arrebatado";
+                break;
+            case R.id.flexible:
+                if (checked)
+                    respuesta1 = "flexible";
+                break;
+            case R.id.tranquilo:
+                if (checked)
+                    respuesta1 = "tranquilo";
+                break;
+            case R.id.dificil:
+                if (checked)
+                    respuesta1 = "dificil";
+                break;
+        }
+
+    }
     public void lanza2de3(View view){
-        Intent myIntent = new Intent(llena_formulario.this, segundaParte.class);
-        //myIntent.putExtra("key", value); //Optional parameters
-        llena_formulario.this.startActivity(myIntent);
+
+        Spinner desplegable = (Spinner) findViewById(R.id.tiempo_libre);
+        respuesta2 = desplegable.getSelectedItem().toString();
+
+        EditText editable = (EditText) findViewById(R.id.Respuesta);
+        respuesta3 = editable.getText().toString();
+
+        if (respuesta1 != null && respuesta2 != null && !respuesta3.isEmpty()) {
+            Intent myIntent = new Intent(llena_formulario.this, segundaParte.class);
+            myIntent.putExtra("respuesta1", respuesta1); //Optional parameters
+            myIntent.putExtra("respuesta2", respuesta2);
+            myIntent.putExtra("respuesta3", respuesta3);
+            llena_formulario.this.startActivity(myIntent);
+        } else {
+
+        }
 
     }
 }

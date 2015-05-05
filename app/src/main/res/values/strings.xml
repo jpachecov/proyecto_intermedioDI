@@ -16,5 +16,14 @@
         <item>@string/feedbacktype3</item>
         <item>@string/feedbacktype4</item>
     </string-array>
+
+    <string-array name="lista_si_no">
+        <item>@string/si</item>
+        <item>@string/no</item>
+    </string-array>
+    <string name="si">Sí</string>
+    <string name="no">No</string>
     <string name="title_activity_segunda_parte">segundaParte</string>
+    <string name="title_activity_tercera_parte">terceraParte</string>
+    <string name="title_activity_formulario_terminado">formularioTerminado</string>
 </resources>
