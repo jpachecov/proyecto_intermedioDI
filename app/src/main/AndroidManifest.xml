@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".llena_formulario"
+            android:label="@string/title_activity_llena_formulario" >
+        </activity>
+        <activity
+            android:name=".segundaParte"
+            android:label="@string/title_activity_segunda_parte" >
+        </activity>
     </application>
 
 </manifest>
