@@ -9,29 +9,17 @@
         android:theme="@style/AppTheme">
 
 
-
         <activity
-            android:name=".Actividad_prinicipal"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-
-        <activity
-            android:name=".llena_formulario"
+            android:name=".Llena_formulario"
             android:label="@string/title_activity_llena_formulario"></activity>
         <activity
-            android:name=".segundaParte"
+            android:name=".SegundaParte"
             android:label="@string/title_activity_segunda_parte"></activity>
         <activity
-            android:name=".terceraParte"
+            android:name=".TerceraParte"
             android:label="@string/title_activity_tercera_parte"></activity>
         <activity
-            android:name=".formularioTerminado"
+            android:name=".FormularioTerminado"
             android:label="@string/title_activity_formulario_terminado"></activity>
 
 

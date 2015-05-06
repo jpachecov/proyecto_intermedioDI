@@ -6,19 +6,32 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class Actividad_prinicipal extends Activity {
+public class FormularioTerminado extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_actividad_prinicipal);
+        /*
+        Bundle bundle = getIntent().getExtras();
+
+        System.out.println(bundle.getString("respuesta1"));
+        System.out.println(bundle.getString("respuesta2"));
+        System.out.println(bundle.getString("respuesta3"));
+
+        System.out.println(bundle.getString("respuesta4"));
+        System.out.println(bundle.getString("respuesta5"));
+        System.out.println(bundle.getString("respuesta6"));
+        System.out.println(bundle.getString("respuesta7"));
+        System.out.println(bundle.getString("respuesta8"));
+        */
+        setContentView(R.layout.activity_formulario_terminado);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_actividad_prinicipal, menu);
+        getMenuInflater().inflate(R.menu.menu_formulario_terminado, menu);
         return true;
     }
 

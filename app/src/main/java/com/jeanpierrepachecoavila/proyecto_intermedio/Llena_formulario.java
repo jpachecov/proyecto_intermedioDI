@@ -3,7 +3,6 @@ package com.jeanpierrepachecoavila.proyecto_intermedio;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,7 +11,7 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 
 
-public class llena_formulario extends Activity {
+public class Llena_formulario extends Activity {
 
 
     private String respuesta1;
@@ -82,11 +81,11 @@ public class llena_formulario extends Activity {
         respuesta3 = editable.getText().toString();
 
         if (respuesta1 != null && respuesta2 != null && !respuesta3.isEmpty()) {
-            Intent myIntent = new Intent(llena_formulario.this, segundaParte.class);
+            Intent myIntent = new Intent(Llena_formulario.this, SegundaParte.class);
             myIntent.putExtra("respuesta1", respuesta1); //Optional parameters
             myIntent.putExtra("respuesta2", respuesta2);
             myIntent.putExtra("respuesta3", respuesta3);
-            llena_formulario.this.startActivity(myIntent);
+            Llena_formulario.this.startActivity(myIntent);
         } else {
 
         }

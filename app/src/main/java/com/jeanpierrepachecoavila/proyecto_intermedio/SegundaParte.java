@@ -7,25 +7,27 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 
-public class terceraParte extends Activity {
+public class SegundaParte extends Activity {
 
-
-    private String respuesta7;
-    private String respuesta8;
+    private String respuesta4;
+    private String respuesta5;
+    private String respuesta6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tercera_parte);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        setContentView(R.layout.activity_segunda_parte);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_tercera_parte, menu);
+        getMenuInflater().inflate(R.menu.menu_segunda_parte, menu);
         return true;
     }
 
@@ -44,27 +46,29 @@ public class terceraParte extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void terminaFormulario(View view) {
+    public void lanza3de3(View view) {
 
-        EditText editable1 = (EditText) findViewById(R.id.texto_cu);
-        respuesta7 = editable1.getText().toString();
-        EditText editable2 = (EditText) findViewById(R.id.ingresos);
-        respuesta8 = editable2.getText().toString();
-        if (!respuesta7.isEmpty() && !respuesta8.isEmpty()) {
-            Intent myintent = new Intent(terceraParte.this, formularioTerminado.class);
+        EditText editable = (EditText) findViewById(R.id.dinero);
+        respuesta4 = editable.getText().toString();
+
+        Spinner desp1 = (Spinner) findViewById(R.id.desp1);
+        respuesta5 = desp1.getSelectedItem().toString();
+
+        Spinner desp2 = (Spinner) findViewById(R.id.desp2);
+        respuesta6 = desp2.getSelectedItem().toString();
+
+        if (!respuesta4.isEmpty() && respuesta5 != null && respuesta6 != null) {
+            Intent myintent = new Intent(SegundaParte.this, TerceraParte.class);
             Bundle bundle = getIntent().getExtras();
             myintent.putExtra("respuesta1", bundle.getString("respuesta1"));
             myintent.putExtra("respuesta2", bundle.getString("respuesta2"));
             myintent.putExtra("respuesta3", bundle.getString("respuesta3"));
-            myintent.putExtra("respuesta4", bundle.getString("respuesta4"));
-            myintent.putExtra("respuesta5", bundle.getString("respuesta5"));
-            myintent.putExtra("respuesta6", bundle.getString("respuesta6"));
-            myintent.putExtra("respuesta7", respuesta7);
-            myintent.putExtra("respuesta8", respuesta8);
-            terceraParte.this.startActivity(myintent);
+            myintent.putExtra("respuesta4", respuesta4);
+            myintent.putExtra("respuesta5", respuesta5);
+            myintent.putExtra("respuesta6", respuesta6);
+            SegundaParte.this.startActivity(myintent);
         } else {
 
         }
     }
-
 }
