@@ -129,8 +129,8 @@ public class Login extends Activity implements OnClickListener {
                     edit.putString("username", username);
                     edit.commit();
 
-                    Intent i = new Intent(Login.this, ReadComments.class);
-                    finish();
+                    Intent i = new Intent(Login.this, Llena_formulario.class);
+                    //finish();
                     startActivity(i);
                     return json.getString(TAG_MESSAGE);
                 } else {
