@@ -11,6 +11,7 @@ public class formularioTerminado extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /*
         Bundle bundle = getIntent().getExtras();
 
         System.out.println(bundle.getString("respuesta1"));
@@ -22,7 +23,7 @@ public class formularioTerminado extends Activity {
         System.out.println(bundle.getString("respuesta6"));
         System.out.println(bundle.getString("respuesta7"));
         System.out.println(bundle.getString("respuesta8"));
-
+        */
         setContentView(R.layout.activity_formulario_terminado);
     }
 

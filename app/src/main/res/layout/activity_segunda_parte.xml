@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="¿Cuánto dinero invertitrías en el alimento de tu mascota?"
+        android:text="4. ¿Cuánto dinero invertitrías en el alimento de tu mascota?"
         android:id="@+id/textView6"
         android:layout_below="@+id/textView5"
         android:layout_alignParentStart="true" />
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="¿Has tenido mascotas anteriormente?"
+        android:text="5. ¿Has tenido mascotas anteriormente?"
         android:id="@+id/textView7"
         android:layout_below="@+id/dinero"
         android:layout_alignParentStart="true"
@@ -50,7 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="¿Actualmente tienes mascotas?"
+        android:text="6. ¿Actualmente tienes mascotas?"
         android:id="@+id/textView8"
         android:layout_below="@+id/desp1"
         android:layout_alignParentStart="true" />
