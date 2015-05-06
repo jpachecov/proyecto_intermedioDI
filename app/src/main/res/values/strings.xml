@@ -26,4 +26,5 @@
     <string name="title_activity_segunda_parte">segundaParte</string>
     <string name="title_activity_tercera_parte">terceraParte</string>
     <string name="title_activity_formulario_terminado">formularioTerminado</string>
+    <string name="forgetpassword">Recupera contraseña</string>
 </resources>
